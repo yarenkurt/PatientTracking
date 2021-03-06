@@ -18,14 +18,14 @@ namespace PatientTracking.DataAccess.Contexts.EF
         public DbSet<PatientDisease> PatientDiseases { get; set; }
         public DbSet<Patient> Patients { get; set; }
         public DbSet<Person> Persons { get; set; }
+        public DbSet<PasswordChangeRequest> PasswordChangeRequests { get; set; }
+        public DbSet<PersonLoginHistory> PersonLoginHistories { get; set; }
+        public DbSet<RelativeDegree> RelativeDegrees { get; set; }
+        public DbSet<PatientRelative> PatientRelatives { get; set; }
+        public DbSet<DoctorAdvice> DoctorAdvices { get; set; }
+        public DbSet<Appointment> Appointments { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder options)
-        {
-            if (!options.IsConfigured)
-            {
-                options.UseSqlServer("Server=.\\KURT; Database = PatientTracking; User=sa; Password=Yaren#1998; ");
-            }
-        }
+       
 
         public PatientTrackingContext()
         {

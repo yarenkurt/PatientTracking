@@ -56,7 +56,7 @@ namespace PatientTracking.DataAccess.Extentions
                 }
                 else if (property.ClrType == typeof(TimeSpan))
                 {
-                    property.SetDefaultValueSql("00:00:00");
+                    property.SetDefaultValueSql("'00:00'");
                 }
 
                 switch (property.Name)

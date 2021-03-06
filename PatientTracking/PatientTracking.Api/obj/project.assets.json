@@ -1511,6 +1511,9 @@
       "PatientTracking.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.3"
+        },
         "compile": {
           "bin/placeholder/PatientTracking.Core.dll": {}
         },

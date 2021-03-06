@@ -52,6 +52,43 @@ namespace PatientTracking.DataAccess.Migrations
                     b.ToTable("Admins");
                 });
 
+            modelBuilder.Entity("PatientTracking.Entities.Concrete.Appointment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("Convert(Date,GetDate())");
+
+                    b.Property<DateTime>("Date")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("Convert(Date,GetDate())");
+
+                    b.Property<int>("DoctorId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PatientId")
+                        .HasColumnType("int");
+
+                    b.Property<TimeSpan>("Time")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("time")
+                        .HasDefaultValueSql("'00:00'");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DoctorId");
+
+                    b.HasIndex("PatientId");
+
+                    b.ToTable("Appointments");
+                });
+
             modelBuilder.Entity("PatientTracking.Entities.Concrete.City", b =>
                 {
                     b.Property<int>("Id")
@@ -239,6 +276,43 @@ namespace PatientTracking.DataAccess.Migrations
                     b.ToTable("Doctors");
                 });
 
+            modelBuilder.Entity("PatientTracking.Entities.Concrete.DoctorAdvice", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("Convert(Date,GetDate())");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)")
+                        .HasDefaultValueSql("space(0)");
+
+                    b.Property<int>("DoctorId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PatientId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("ReadingTime")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DoctorId");
+
+                    b.HasIndex("PatientId");
+
+                    b.ToTable("DoctorAdvices");
+                });
+
             modelBuilder.Entity("PatientTracking.Entities.Concrete.Hospital", b =>
                 {
                     b.Property<int>("Id")
@@ -275,6 +349,51 @@ namespace PatientTracking.DataAccess.Migrations
                     b.HasIndex("DistrictId");
 
                     b.ToTable("Hospitals");
+                });
+
+            modelBuilder.Entity("PatientTracking.Entities.Concrete.PasswordChangeRequest", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("Convert(Date,GetDate())");
+
+                    b.Property<DateTime>("ExpiredDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("Convert(Date,GetDate())");
+
+                    b.Property<bool>("IsUsed")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
+
+                    b.Property<int>("PersonId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Token")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)")
+                        .HasDefaultValueSql("space(0)");
+
+                    b.Property<DateTime?>("UsedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PersonId");
+
+                    b.HasIndex("Token")
+                        .IsUnique();
+
+                    b.ToTable("PasswordChangeRequests");
                 });
 
             modelBuilder.Entity("PatientTracking.Entities.Concrete.Patient", b =>
@@ -337,6 +456,49 @@ namespace PatientTracking.DataAccess.Migrations
                     b.ToTable("PatientDiseases");
                 });
 
+            modelBuilder.Entity("PatientTracking.Entities.Concrete.PatientRelative", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)")
+                        .HasDefaultValueSql("space(0)");
+
+                    b.Property<string>("Gsm")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasMaxLength(11)
+                        .HasColumnType("nvarchar(11)")
+                        .HasDefaultValueSql("space(0)");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)")
+                        .HasDefaultValueSql("space(0)");
+
+                    b.Property<int>("PatientId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("RelativeDegreeId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PatientId");
+
+                    b.HasIndex("RelativeDegreeId");
+
+                    b.ToTable("PatientRelatives");
+                });
+
             modelBuilder.Entity("PatientTracking.Entities.Concrete.Person", b =>
                 {
                     b.Property<int>("Id")
@@ -394,6 +556,65 @@ namespace PatientTracking.DataAccess.Migrations
                     b.ToTable("Persons");
                 });
 
+            modelBuilder.Entity("PatientTracking.Entities.Concrete.PersonLoginHistory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("Date")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("Convert(Date,GetDate())");
+
+                    b.Property<string>("IpAddress")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)")
+                        .HasDefaultValueSql("space(0)");
+
+                    b.Property<bool>("IsSuccess")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
+
+                    b.Property<string>("Message")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("nvarchar(max)")
+                        .HasDefaultValueSql("space(0)");
+
+                    b.Property<int>("PersonId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PersonId");
+
+                    b.ToTable("PersonLoginHistories");
+                });
+
+            modelBuilder.Entity("PatientTracking.Entities.Concrete.RelativeDegree", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)")
+                        .HasDefaultValueSql("space(0)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("RelativeDegrees");
+                });
+
             modelBuilder.Entity("PatientTracking.Entities.Concrete.Admin", b =>
                 {
                     b.HasOne("PatientTracking.Entities.Concrete.Person", "Person")
@@ -403,6 +624,25 @@ namespace PatientTracking.DataAccess.Migrations
                         .IsRequired();
 
                     b.Navigation("Person");
+                });
+
+            modelBuilder.Entity("PatientTracking.Entities.Concrete.Appointment", b =>
+                {
+                    b.HasOne("PatientTracking.Entities.Concrete.Doctor", "Doctor")
+                        .WithMany()
+                        .HasForeignKey("DoctorId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("PatientTracking.Entities.Concrete.Patient", "Patient")
+                        .WithMany()
+                        .HasForeignKey("PatientId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Doctor");
+
+                    b.Navigation("Patient");
                 });
 
             modelBuilder.Entity("PatientTracking.Entities.Concrete.City", b =>
@@ -476,6 +716,25 @@ namespace PatientTracking.DataAccess.Migrations
                     b.Navigation("Person");
                 });
 
+            modelBuilder.Entity("PatientTracking.Entities.Concrete.DoctorAdvice", b =>
+                {
+                    b.HasOne("PatientTracking.Entities.Concrete.Doctor", "Doctor")
+                        .WithMany()
+                        .HasForeignKey("DoctorId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("PatientTracking.Entities.Concrete.Patient", "Patient")
+                        .WithMany()
+                        .HasForeignKey("PatientId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Doctor");
+
+                    b.Navigation("Patient");
+                });
+
             modelBuilder.Entity("PatientTracking.Entities.Concrete.Hospital", b =>
                 {
                     b.HasOne("PatientTracking.Entities.Concrete.District", "District")
@@ -485,6 +744,17 @@ namespace PatientTracking.DataAccess.Migrations
                         .IsRequired();
 
                     b.Navigation("District");
+                });
+
+            modelBuilder.Entity("PatientTracking.Entities.Concrete.PasswordChangeRequest", b =>
+                {
+                    b.HasOne("PatientTracking.Entities.Concrete.Person", "Person")
+                        .WithMany()
+                        .HasForeignKey("PersonId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Person");
                 });
 
             modelBuilder.Entity("PatientTracking.Entities.Concrete.Patient", b =>
@@ -515,6 +785,36 @@ namespace PatientTracking.DataAccess.Migrations
                     b.Navigation("Disease");
 
                     b.Navigation("Patient");
+                });
+
+            modelBuilder.Entity("PatientTracking.Entities.Concrete.PatientRelative", b =>
+                {
+                    b.HasOne("PatientTracking.Entities.Concrete.Patient", "Patient")
+                        .WithMany()
+                        .HasForeignKey("PatientId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("PatientTracking.Entities.Concrete.RelativeDegree", "RelativeDegree")
+                        .WithMany()
+                        .HasForeignKey("RelativeDegreeId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Patient");
+
+                    b.Navigation("RelativeDegree");
+                });
+
+            modelBuilder.Entity("PatientTracking.Entities.Concrete.PersonLoginHistory", b =>
+                {
+                    b.HasOne("PatientTracking.Entities.Concrete.Person", "Person")
+                        .WithMany()
+                        .HasForeignKey("PersonId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Person");
                 });
 #pragma warning restore 612, 618
         }

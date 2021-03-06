@@ -6,3 +6,4 @@ D:\Projects\2021\PatientTrackingandEmergency\PatientTracking\PatientTracking.Bus
 D:\Projects\2021\PatientTrackingandEmergency\PatientTracking\PatientTracking.Business\obj\Debug\netcoreapp3.1\PatientTracking.Business.csproj.CoreCompileInputs.cache
 D:\Projects\2021\PatientTrackingandEmergency\PatientTracking\PatientTracking.Business\obj\Debug\netcoreapp3.1\PatientTracking.Business.dll
 D:\Projects\2021\PatientTrackingandEmergency\PatientTracking\PatientTracking.Business\obj\Debug\netcoreapp3.1\PatientTracking.Business.pdb
+D:\Projects\2021\PatientTrackingandEmergency\PatientTracking\PatientTracking.Business\obj\Debug\netcoreapp3.1\PatientTracking.Business.csprojAssemblyReference.cache
