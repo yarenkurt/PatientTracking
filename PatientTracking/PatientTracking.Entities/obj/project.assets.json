@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "PatientTracking.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/PatientTracking.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PatientTracking.Core.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "PatientTracking.Core/1.0.0": {
+      "type": "project",
+      "path": "../PatientTracking.Core/PatientTracking.Core.csproj",
+      "msbuildProject": "../PatientTracking.Core/PatientTracking.Core.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "PatientTracking.Core >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\yaren\\.nuget\\packages\\": {}
@@ -33,7 +52,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Projects\\2021\\PatientTrackingandEmergency\\PatientTracking\\PatientTracking.Core\\PatientTracking.Core.csproj": {
+              "projectPath": "D:\\Projects\\2021\\PatientTrackingandEmergency\\PatientTracking\\PatientTracking.Core\\PatientTracking.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
