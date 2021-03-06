@@ -1,0 +1,12 @@
+D:\Projects\2021\PatientTrackingandEmergency\PatientTracking\PatientTracking.Entities\bin\Debug\netcoreapp3.1\PatientTracking.Entities.deps.json
+D:\Projects\2021\PatientTrackingandEmergency\PatientTracking\PatientTracking.Entities\bin\Debug\netcoreapp3.1\PatientTracking.Entities.dll
+D:\Projects\2021\PatientTrackingandEmergency\PatientTracking\PatientTracking.Entities\bin\Debug\netcoreapp3.1\PatientTracking.Entities.pdb
+D:\Projects\2021\PatientTrackingandEmergency\PatientTracking\PatientTracking.Entities\bin\Debug\netcoreapp3.1\PatientTracking.Core.dll
+D:\Projects\2021\PatientTrackingandEmergency\PatientTracking\PatientTracking.Entities\bin\Debug\netcoreapp3.1\PatientTracking.Core.pdb
+D:\Projects\2021\PatientTrackingandEmergency\PatientTracking\PatientTracking.Entities\obj\Debug\netcoreapp3.1\PatientTracking.Entities.csprojAssemblyReference.cache
+D:\Projects\2021\PatientTrackingandEmergency\PatientTracking\PatientTracking.Entities\obj\Debug\netcoreapp3.1\PatientTracking.Entities.AssemblyInfoInputs.cache
+D:\Projects\2021\PatientTrackingandEmergency\PatientTracking\PatientTracking.Entities\obj\Debug\netcoreapp3.1\PatientTracking.Entities.AssemblyInfo.cs
+D:\Projects\2021\PatientTrackingandEmergency\PatientTracking\PatientTracking.Entities\obj\Debug\netcoreapp3.1\PatientTracking.Entities.csproj.CoreCompileInputs.cache
+D:\Projects\2021\PatientTrackingandEmergency\PatientTracking\PatientTracking.Entities\obj\Debug\netcoreapp3.1\PatientTracking.Entities.csproj.CopyComplete
+D:\Projects\2021\PatientTrackingandEmergency\PatientTracking\PatientTracking.Entities\obj\Debug\netcoreapp3.1\PatientTracking.Entities.dll
+D:\Projects\2021\PatientTrackingandEmergency\PatientTracking\PatientTracking.Entities\obj\Debug\netcoreapp3.1\PatientTracking.Entities.pdb

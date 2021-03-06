@@ -1,0 +1,8 @@
+D:\Projects\2021\PatientTrackingandEmergency\PatientTracking\PatientTracking.Business\bin\Debug\netcoreapp3.1\PatientTracking.Business.deps.json
+D:\Projects\2021\PatientTrackingandEmergency\PatientTracking\PatientTracking.Business\bin\Debug\netcoreapp3.1\PatientTracking.Business.dll
+D:\Projects\2021\PatientTrackingandEmergency\PatientTracking\PatientTracking.Business\bin\Debug\netcoreapp3.1\PatientTracking.Business.pdb
+D:\Projects\2021\PatientTrackingandEmergency\PatientTracking\PatientTracking.Business\obj\Debug\netcoreapp3.1\PatientTracking.Business.AssemblyInfoInputs.cache
+D:\Projects\2021\PatientTrackingandEmergency\PatientTracking\PatientTracking.Business\obj\Debug\netcoreapp3.1\PatientTracking.Business.AssemblyInfo.cs
+D:\Projects\2021\PatientTrackingandEmergency\PatientTracking\PatientTracking.Business\obj\Debug\netcoreapp3.1\PatientTracking.Business.csproj.CoreCompileInputs.cache
+D:\Projects\2021\PatientTrackingandEmergency\PatientTracking\PatientTracking.Business\obj\Debug\netcoreapp3.1\PatientTracking.Business.dll
+D:\Projects\2021\PatientTrackingandEmergency\PatientTracking\PatientTracking.Business\obj\Debug\netcoreapp3.1\PatientTracking.Business.pdb
