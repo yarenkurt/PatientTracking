@@ -5,6 +5,14 @@ VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientTracking.Entities", "PatientTracking.Entities\PatientTracking.Entities.csproj", "{4F67AEEE-23C9-47C8-92B5-8EF108A3848D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientTracking.DataAccess", "PatientTracking.DataAccess\PatientTracking.DataAccess.csproj", "{4A131924-DCB6-4607-AD6F-3898E15B81CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientTracking.Business", "PatientTracking.Business\PatientTracking.Business.csproj", "{C5F7E5D3-32F5-4E25-9307-AA4A7E9A39B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientTracking.Api", "PatientTracking.Api\PatientTracking.Api.csproj", "{696CFE77-284D-4617-B525-75E9B0E9CC37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientTracking.Core", "PatientTracking.Core\PatientTracking.Core.csproj", "{D3175F3C-AE9D-4369-B11B-B30306B45D7C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +23,22 @@ Global
 		{4F67AEEE-23C9-47C8-92B5-8EF108A3848D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F67AEEE-23C9-47C8-92B5-8EF108A3848D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F67AEEE-23C9-47C8-92B5-8EF108A3848D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A131924-DCB6-4607-AD6F-3898E15B81CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A131924-DCB6-4607-AD6F-3898E15B81CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A131924-DCB6-4607-AD6F-3898E15B81CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A131924-DCB6-4607-AD6F-3898E15B81CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5F7E5D3-32F5-4E25-9307-AA4A7E9A39B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5F7E5D3-32F5-4E25-9307-AA4A7E9A39B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5F7E5D3-32F5-4E25-9307-AA4A7E9A39B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5F7E5D3-32F5-4E25-9307-AA4A7E9A39B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{696CFE77-284D-4617-B525-75E9B0E9CC37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{696CFE77-284D-4617-B525-75E9B0E9CC37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{696CFE77-284D-4617-B525-75E9B0E9CC37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{696CFE77-284D-4617-B525-75E9B0E9CC37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3175F3C-AE9D-4369-B11B-B30306B45D7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3175F3C-AE9D-4369-B11B-B30306B45D7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3175F3C-AE9D-4369-B11B-B30306B45D7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3175F3C-AE9D-4369-B11B-B30306B45D7C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
