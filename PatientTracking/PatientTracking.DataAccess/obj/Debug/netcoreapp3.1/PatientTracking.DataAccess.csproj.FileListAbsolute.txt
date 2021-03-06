@@ -1,0 +1,5 @@
+D:\Projects\2021\PatientTrackingandEmergency\PatientTracking\PatientTracking.DataAccess\bin\Debug\netcoreapp3.1\PatientTracking.Core.dll
+D:\Projects\2021\PatientTrackingandEmergency\PatientTracking\PatientTracking.DataAccess\bin\Debug\netcoreapp3.1\PatientTracking.Entities.dll
+D:\Projects\2021\PatientTrackingandEmergency\PatientTracking\PatientTracking.DataAccess\obj\Debug\netcoreapp3.1\PatientTracking.DataAccess.csprojAssemblyReference.cache
+D:\Projects\2021\PatientTrackingandEmergency\PatientTracking\PatientTracking.DataAccess\obj\Debug\netcoreapp3.1\PatientTracking.DataAccess.AssemblyInfoInputs.cache
+D:\Projects\2021\PatientTrackingandEmergency\PatientTracking\PatientTracking.DataAccess\obj\Debug\netcoreapp3.1\PatientTracking.DataAccess.AssemblyInfo.cs
