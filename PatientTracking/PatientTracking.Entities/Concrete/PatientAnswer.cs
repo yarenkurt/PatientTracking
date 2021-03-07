@@ -5,6 +5,7 @@ namespace PatientTracking.Entities.Concrete
 {
     public class PatientAnswer:IBaseEntity
     {
+        
         public int Id { get; set; }
         public int PatientId { get; set; }
         public int QuestionPoolId { get; set; }

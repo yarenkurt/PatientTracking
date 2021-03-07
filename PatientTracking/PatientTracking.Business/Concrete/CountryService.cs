@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using PatientTracking.Business.Abstract;
 using PatientTracking.Business.Repositories;
+using PatientTracking.Core;
 using PatientTracking.Core.Models;
 using PatientTracking.Core.Results;
 using PatientTracking.DataAccess.Repositories;
@@ -29,7 +30,7 @@ namespace PatientTracking.Business.Concrete
         public async Task<List<CountryDto>> GetAllAsync()
         {
             var entities = await _dal.TableNoTracking.OrderBy(x => x.Description).ToListAsync();
-
+         
             return _mapper.Map<List<CountryDto>>(entities);
         }
 
