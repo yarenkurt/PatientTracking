@@ -14,6 +14,7 @@ namespace PatientTracking.Entities.Concrete
         public string Gsm { get; set; }
         public int RelativeDegreeId { get; set; }
 
+
         public Patient Patient { get; set; }
         public RelativeDegree RelativeDegree { get; set; }
     }

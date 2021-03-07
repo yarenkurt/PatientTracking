@@ -2,8 +2,6 @@
 
 namespace PatientTracking.Entities.Concrete
 {
-
-
     public class Patient : IBaseEntity
     {
         public int Id { get; set; }

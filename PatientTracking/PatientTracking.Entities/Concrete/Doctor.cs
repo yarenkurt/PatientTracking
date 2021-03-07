@@ -11,7 +11,7 @@ namespace PatientTracking.Entities.Concrete
         public string Email { get; set; }
         public bool IsBlocked { get; set; }
 
-        public Deparment Deparment { get; set; }
+        public Department Deparment { get; set; }
         public Degree Degree { get; set; }
         public Person Person { get; set; }
 

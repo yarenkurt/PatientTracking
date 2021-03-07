@@ -4,9 +4,9 @@ using PatientTracking.Entities.Concrete;
 
 namespace PatientTracking.DataAccess.Mappings.EF
 {
-    public class DeparmentMap : IEntityTypeConfiguration<Deparment>
+    public class DeparmentMap : IEntityTypeConfiguration<Department>
     {
-        public void Configure(EntityTypeBuilder<Deparment> builder)
+        public void Configure(EntityTypeBuilder<Department> builder)
         {
             builder.ToTable("Deparments");
         }

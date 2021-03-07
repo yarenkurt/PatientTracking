@@ -10,7 +10,7 @@ namespace PatientTracking.DataAccess.Contexts.EF
         public DbSet<City> Cities { get; set; }
         public DbSet<Country> Countries { get; set; }
         public DbSet<Degree> Degrees { get; set; }
-        public DbSet<Deparment> Deparments { get; set; }
+        public DbSet<Department> Deparments { get; set; }
         public DbSet<Disease> Diseases { get; set; }
         public DbSet<District> Districts { get; set; }
         public DbSet<Doctor> Doctors { get; set; }

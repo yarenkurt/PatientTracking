@@ -9,7 +9,7 @@ namespace PatientTracking.Entities.Concrete
         public int DeparmentId { get; set; }
         public string Description { get; set; }
 
-        public Deparment Deparment { get; set; }
+        public Department Deparment { get; set; }
 
     }
 }
